@@ -31,20 +31,17 @@
       <div class="container">
         <div class="navbar">
           <div class="navbar-logo">
-            <h1><span>ANANDHAM</span></h1>
+            <h1><span>ANANDHAM INN</span></h1>
           </div>
-          
-          <div class="navbar-toggler">
-            <span class="hamburger-menu"></span>
-          </div>
-          
+          <!-- Hidden Checkbox for Toggle -->
+          <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+          <label for="menu-toggle" class="menu-toggle">☰</label>
           <ul class="navbar-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="nearby_attractions.html">Nearby Attractions</a></li>
-            <li class="active"><a href="arrangements.html">Arrangements</a></li>
-            <li><a href="rules.html">Property Rules</a></li>
+            <li ><a href="arrangements.html">Arrangements</a></li>
+            <li class="active"><a href="rules.html">Property Rules</a></li>
           </ul>
-          
           <div class="navbar-info">
             <a class="map-link" href="#"><i class="fa fa-map-marker-alt"></i> View Map</a>
             <a class="phone-link" href="tel:+123456789"><i class="fa fa-phone"></i> +1 234 567 89</a>
@@ -54,7 +51,7 @@
       </div>
     </header>
 <style>
-/* Reset */
+  /* Reset */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -75,11 +72,11 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px; /* Increased gap */
+  gap: 20px;
 }
 
 .navbar-logo h1 {
-  font-size: 24px; /* Increased logo font size */
+  font-size: 24px;
   margin: 0;
 }
 
@@ -93,7 +90,8 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px; /* Increased gap */
+  gap: 20px;
+  transition: max-height 0.3s ease;
 }
 
 .navbar-links li {
@@ -103,7 +101,7 @@ body {
 .navbar-links li a {
   text-decoration: none;
   color: #000;
-  font-size: 16px; /* Increased link font size */
+  font-size: 16px;
   transition: color 0.3s;
 }
 
@@ -132,7 +130,7 @@ body {
 
 .navbar-info .map-link i,
 .navbar-info .phone-link i {
-  margin-right: 5px; /* Space between icon and text */
+  margin-right: 5px;
 }
 
 .navbar-info .map-link:hover,
@@ -143,95 +141,59 @@ body {
 /* Font Awesome Icon */
 .fa-map-marker-alt,
 .fa-phone {
-  color: #008080; /* Icon color */
+  color: #008080;
 }
 
-/* Hamburger Menu Styles */
-.navbar-toggler {
+/* Menu Toggle Checkbox */
+.menu-toggle-checkbox {
   display: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
   cursor: pointer;
 }
 
-.hamburger-menu {
-  width: 25px;
-  height: 2px;
-  background-color: #000;
-  position: relative;
-  margin: 5px 0;
-}
-
-.hamburger-menu::before,
-.hamburger-menu::after {
-  content: '';
-  width: 25px;
-  height: 2px;
-  background-color: #000;
-  position: absolute;
-}
-
-.hamburger-menu::before {
-  top: -5px;
-}
-
-.hamburger-menu::after {
-  bottom: -5px;
-}
-
-.navbar-links {
-  display: none; /* Hide links by default on mobile */
-  flex-direction: column;
-  background-color: #fff;
-  position: absolute;
-  top: 60px; /* Adjust based on header height */
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.navbar-links.active {
-  display: flex; /* Show links when active */
-}
-
-.navbar-links li a {
-  padding: 10px;
-  text-align: left;
-}
-
-.navbar-info {
-  display: none; /* Hide info in hamburger view */
-}
-
-@media (max-width: 768px) { /* For tablets and mobile devices */
-  .navbar {
-    flex-direction: column; /* Stack navbar items vertically */
-  }
-
-  .navbar-toggler {
-    display: block; /* Show hamburger menu */
-  }
-
+@media (max-width: 768px) {
   .navbar-links {
-    flex-direction: column; /* Stack links vertically */
-    gap: 0; /* No extra gap */
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-links.show {
+    max-height: 300px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Show menu when checkbox is checked */
+  .menu-toggle-checkbox:checked ~ .navbar-links {
+    max-height: 300px; /* Adjust as needed */
   }
 
   .navbar-links li a {
-    font-size: 14px; /* Decrease font size on small screens */
+    font-size: 14px;
   }
 
   .navbar-info {
     text-align: left;
     align-items: flex-start;
-    display: none; /* Hide navbar info in hamburger view */
   }
 
-  .navbar-info.active {
-    display: flex; /* Show navbar info when active */
+  .navbar-info .map-link,
+  .navbar-info .phone-link {
+    font-size: 12px;
   }
 }
 
-
-</style>    
+</style>       
     <!-- END head -->
     <div class="property-rules">
       <h2 >Property Rules</h2>
@@ -350,7 +312,7 @@ body {
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;
             <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i
-              class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Cognetz</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </p>
         </div>

@@ -31,14 +31,16 @@
       <div class="container">
         <div class="navbar">
           <div class="navbar-logo">
-            <h1><span>ANANDHAM</span></h1>
+            <h1><span>ANANDHAM INN</span></h1>
           </div>
-         
+          <!-- Hidden Checkbox for Toggle -->
+          <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+          <label for="menu-toggle" class="menu-toggle">☰</label>
           <ul class="navbar-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="nearby_attractions.html">Nearby Attractions</a></li>
             <li class="active"><a href="arrangements.html">Arrangements</a></li>
-            <li><a href="rules.html">Property Rules</a></li>
+            <li ><a href="rules.html">Property Rules</a></li>
           </ul>
           <div class="navbar-info">
             <a class="map-link" href="#"><i class="fa fa-map-marker-alt"></i> View Map</a>
@@ -70,11 +72,11 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px; /* Increased gap */
+  gap: 20px;
 }
 
 .navbar-logo h1 {
-  font-size: 24px; /* Increased logo font size */
+  font-size: 24px;
   margin: 0;
 }
 
@@ -88,7 +90,8 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px; /* Increased gap */
+  gap: 20px;
+  transition: max-height 0.3s ease;
 }
 
 .navbar-links li {
@@ -98,7 +101,7 @@ body {
 .navbar-links li a {
   text-decoration: none;
   color: #000;
-  font-size: 16px; /* Increased link font size */
+  font-size: 16px;
   transition: color 0.3s;
 }
 
@@ -127,7 +130,7 @@ body {
 
 .navbar-info .map-link i,
 .navbar-info .phone-link i {
-  margin-right: 5px; /* Space between icon and text */
+  margin-right: 5px;
 }
 
 .navbar-info .map-link:hover,
@@ -138,18 +141,45 @@ body {
 /* Font Awesome Icon */
 .fa-map-marker-alt,
 .fa-phone {
-  color: #008080; /* Icon color */
+  color: #008080;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) { /* For tablets and mobile devices */
+/* Menu Toggle Checkbox */
+.menu-toggle-checkbox {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
   .navbar-links {
-    flex-direction: column; /* Stack links vertically */
-    gap: 10px; /* Reduce gap */
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-links.show {
+    max-height: 300px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Show menu when checkbox is checked */
+  .menu-toggle-checkbox:checked ~ .navbar-links {
+    max-height: 300px; /* Adjust as needed */
   }
 
   .navbar-links li a {
-    font-size: 14px; /* Decrease font size on small screens */
+    font-size: 14px;
   }
 
   .navbar-info {
@@ -159,16 +189,16 @@ body {
 
   .navbar-info .map-link,
   .navbar-info .phone-link {
-    font-size: 12px; /* Decrease font size on small screens */
+    font-size: 12px;
   }
 }
 
-</style>    
+</style>     
     <!-- END head -->
 
    
 
-    <section class="site-hero inner-page overlay" style="background-image: url(images/hero_4.jpg);" data-stellar-background-ratio="0.5">
+    <section class="site-hero inner-page overlay" style="background-image: url(images/Hero_.jpg);" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row site-hero-inner justify-content-center align-items-center" style="padding-top: -300px;">
           <div class="col-md-10 text-center" data-aos="fade">
@@ -424,7 +454,7 @@ body {
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
               <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i
-                class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Cognetz</a>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
