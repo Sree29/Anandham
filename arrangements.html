@@ -27,10 +27,47 @@
   </head>
   <body>
     <style>
-      body {
-        overflow-x: hidden;
+      .site-hero {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh; /* Set height to viewport height for better scaling */
       }
       
+      @media (max-width: 768px) {
+        .site-hero {
+          height: 50vh; /* Adjust height for mobile screens */
+        }
+      
+        .site-hero .heading {
+          font-size: 24px; /* Adjust font size for readability */
+        }
+      }
+body{
+  overflow-x: hidden;
+}      
+.site-hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; /* Set height to viewport height for better scaling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .site-hero {
+    height: 50vh; /* Adjust height for mobile screens */
+    background-size: 100% 100%; /* Ensures full coverage on mobile */
+    object-fit: cover; /* Maintains aspect ratio */
+  }
+
+  .site-hero .heading {
+    font-size: 24px; /* Adjust font size for readability */
+  }
+}
+
     </style>
     <header class="site-header">
       <div class="container">
@@ -59,7 +96,7 @@
   /* Reset */
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+ 
 }
 
 /* Header (Navbar) */
@@ -197,6 +234,9 @@ body {
     font-size: 12px;
   }
 }
+
+
+
 
 </style>     
     <!-- END head -->
