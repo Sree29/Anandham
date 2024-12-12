@@ -26,8 +26,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
   <body>
-    
-    
+    <style>
+      .site-hero {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh; /* Set height to viewport height for better scaling */
+      }
+      
+      @media (max-width: 768px) {
+        .site-hero {
+          height: 50vh; /* Adjust height for mobile screens */
+        }
+      
+        .site-hero .heading {
+          font-size: 24px; /* Adjust font size for readability */
+        }
+      }
+body{
+  overflow-x: hidden;
+}      
+.site-hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; /* Set height to viewport height for better scaling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .site-hero {
+    height: 50vh; /* Adjust height for mobile screens */
+    background-size: 100% 100%; /* Ensures full coverage on mobile */
+    object-fit: cover; /* Maintains aspect ratio */
+  }
+
+  .site-hero .heading {
+    font-size: 24px; /* Adjust font size for readability */
+  }
+}
+
+    </style>
     <header class="site-header">
       <div class="container">
         <div class="navbar">
@@ -55,7 +96,7 @@
   /* Reset */
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+ 
 }
 
 /* Header (Navbar) */
@@ -195,21 +236,29 @@ body {
 }
 
 
-</style>   
-<section class="site-hero inner-page overlay" style="background-image: url(images/hero_4.jpg);" data-stellar-background-ratio="0.5">
-  <div class="container">
-    <div class="row site-hero-inner justify-content-center align-items-center" style="padding-top: -300px;">
-      <div class="col-md-10 text-center" data-aos="fade">
-        <h2 class="heading mb-3" style="padding-top: -50px;">Nearby Attractions</h2>
-        <ul class="custom-breadcrumbs mb-4">
-          <li><a href="index.html">Home</a></li>
-          <li>&bullet;</li>
-          <li>Nearby Attractions</li>
-        </ul>
+
+
+</style>     
+    <!-- END head -->
+
+   
+
+    <section class="site-hero inner-page overlay" style="background-image: url(images/1.jpg);" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row site-hero-inner justify-content-center align-items-center" style="padding-top: -300px;">
+          <div class="col-md-10 text-center" data-aos="fade">
+            <h2 class="heading mb-3" style="padding-top: -50px;">Nearby Attractions</h2>
+           
+            <ul class="custom-breadcrumbs mb-4">
+              <li><a href="index.html">Home</a></li>
+              <li>&bullet;</li>
+              <li>Nearby Attractions</li>
+            </ul>
+           
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
     <!-- END section -->
 
     <!-- <section class="section pb-4">
