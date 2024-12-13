@@ -217,8 +217,14 @@ body {
   font-size: 24px;
   cursor: pointer;
 }
-
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute; /* Position the toggle icon */
+    right: 10px; /* Adjust the spacing from the right edge */
+    top: 15px; /* Adjust spacing from the top */
+  }
+
   .navbar-links {
     max-height: 0;
     overflow: hidden;
@@ -228,10 +234,6 @@ body {
 
   .navbar-links.show {
     max-height: 300px;
-  }
-
-  .menu-toggle {
-    display: block;
   }
 
   /* Show menu when checkbox is checked */
@@ -253,6 +255,7 @@ body {
     font-size: 12px;
   }
 }
+
 
 
 
