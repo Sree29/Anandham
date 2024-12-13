@@ -58,13 +58,14 @@ body{
 
 @media (max-width: 768px) {
   .site-hero {
-    height: 50vh; /* Adjust height for mobile screens */
-    background-size: 100% 100%; /* Ensures full coverage on mobile */
-    object-fit: cover; /* Maintains aspect ratio */
+    height: auto; /* Let the container height adjust to the image */
+    background-size: contain; /* Ensure the entire image is visible */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+    background-position: center; /* Center the image */
   }
 
   .site-hero .heading {
-    font-size: 24px; /* Adjust font size for readability */
+    font-size: 24px; /* Adjust font size */
   }
 }
 
@@ -72,9 +73,25 @@ body{
     <header class="site-header">
       <div class="container">
         <div class="navbar">
-          <div class="navbar-logo">
+          <!-- <div class="navbar-logo">
             <h1><span>ANANDHAM INN</span></h1>
-          </div>
+          </div> -->
+          <div class="navbar-logo">
+            <img src="images/LOGO.jpeg" alt="Anandham Inn Logo" class="logo-img">
+        </div>
+        <style>
+          .navbar-logo {
+            display: flex;
+            justify-content: center; /* Center the logo horizontally in the navbar */
+            align-items: center; /* Center the logo vertically in the navbar */
+        }
+        
+        .logo-img {
+            width: 150px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        
+        </style>
           <!-- Hidden Checkbox for Toggle -->
           <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
           <label for="menu-toggle" class="menu-toggle">☰</label>
