@@ -58,14 +58,15 @@ body{
 
 @media (max-width: 768px) {
   .site-hero {
-    height: auto; /* Let the container height adjust to the image */
-    background-size: contain; /* Ensure the entire image is visible */
-    background-repeat: no-repeat; /* Avoid repeating the image */
-    background-position: center; /* Center the image */
+    height: auto; /* Allow the height to adapt dynamically */
+    background-size: cover; /* Fill the container while maintaining aspect ratio */
+    background-position: center; /* Center the image in the container */
+    background-repeat: no-repeat; /* Prevent repetition of the image */
   }
 
   .site-hero .heading {
     font-size: 24px; /* Adjust font size */
+    margin-top: 10px; /* Add space for text clarity */
   }
 }
 
