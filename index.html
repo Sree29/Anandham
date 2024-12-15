@@ -208,27 +208,42 @@
   }
   
   @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 0; /* Remove any space from the right side */
+      top: 15px; /* Adjust spacing from the top */
+      margin: 0; /* Ensure no extra margin around the toggle */
+      padding: 10px; /* Optional: Adjust padding for better touch area */
+    }
+  
     .navbar-links {
       max-height: 0;
       overflow: hidden;
       flex-direction: column;
       gap: 10px;
+      position: absolute; /* Position the menu links */
+      right: 0; /* Align the menu to the right edge */
+      background-color: white; /* Optional: Add a background to the menu */
+      z-index: 1000; /* Ensure the menu appears above other content */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
     }
   
     .navbar-links.show {
-      max-height: 300px;
+      max-height: 300px; /* Adjust as needed */
+      left: auto; /* Ensure it doesn't move to the left */
     }
   
-    .menu-toggle {
-      display: block;
-    }
-  
+    /* Show menu when checkbox is checked */
     .menu-toggle-checkbox:checked ~ .navbar-links {
-      max-height: 300px;
+      max-height: 300px; /* Allow the menu to expand */
+      left: 0; /* Ensure the menu opens towards the left */
     }
   
     .navbar-links li a {
       font-size: 14px;
+      text-align: left; /* Align menu items to the left */
+      padding: 10px; /* Add padding for spacing */
     }
   
     .navbar-info {
@@ -241,6 +256,7 @@
       font-size: 12px;
     }
   }
+  
   
   /* Hero Section */
   .site-hero {
