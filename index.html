@@ -88,8 +88,11 @@
         </ul>
         <div class="navbar-info">
           <a class="map-link" href="#"><i class="fa fa-map-marker-alt"></i> View Map</a>
-          <a class="phone-link" href="tel:+123456789"><i class="fa fa-phone"></i> +1 234 567 89</a>
-          <span class="address">1st Mile, Kumily, 685509,<br> Munnar Theni Highway (Kumily Munnar Road)</span>
+          <a class="phone-link" href="tel:+123456789"><i class="fa fa-phone"></i> +91 8075304266</a>
+          <a class="email-link" style="color: black; text-decoration: none;" href="mailto:anandhaminn@gmail.com">
+            <i class="fa fa-envelope" style=" color: #008080;"></i> anandhaminn@gmail.com
+          </a>      
+          <span class="address">1st Mile, Kumily, 685509, Munnar Theni Highway (Kumily Munnar Road)</span>
         </div>
       </div>
     </div>
@@ -258,23 +261,7 @@
   }
   
   
-  /* Hero Section */
-  .site-hero {
-    position: relative;
-    width: 100%;
-  height: 900px;
-    overflow: hidden;
-  }
-  
-  .full-width-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-  }
+ 
   
   .site-hero-content {
     position: relative;
@@ -308,21 +295,38 @@
   
   
   <section class="site-hero">
-    <img src="images/home1.JPG" alt="Background" class="full-width-image">
+    <img src="images/index1 (2).jpeg" alt="Background" class="full-image">
 </section>
+
 <style>
-  /* General styles for all screen sizes */
+ 
+/* Header */
+.header {
+  height: 80px; /* Example height */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
 .site-hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* Default full-screen height for desktop */
-  overflow: hidden; /* Prevent scrolling outside the container */
+  height: calc(100vh - 80px); /* Full height minus header */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center image vertically */
+  overflow: hidden;
+  margin-top: 80px; /* Ensure it starts below the header */
 }
 
-.full-width-image {
+.full-image {
   width: 100%;
-  height: 100%; /* Fill the container */
-  object-fit: cover; /* Ensures the image fills the container without distortion */
+  height: 100%;
+  object-fit: cover; /* Ensures full coverage of the container */
+  object-position: center center; /* Prioritize centering both horizontally and vertically */
+  display: block;
 }
 
 /* Specific adjustments for mobile view */
@@ -349,23 +353,35 @@
   }
 </style>
 
+
+
 <section class="py-5 bg-light custom-padding">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-12 col-lg-7 ml-auto order-lg-2 position-relative mb-5" data-aos="fade-up">
-        <figure class="img-absolute">
-          <img src="images/food-1.jpg" alt="Image" class="img-fluid">
+      <div class="col-md-12 col-lg-5 ml-auto order-lg-2 position-relative mb-5" data-aos="fade-up">
+        <!-- <figure class="img-absolute">
+          <img src="images/food-1.jpg" alt="Image" class="img-fluid"  >
         </figure>
-        <img src="images/img_1.jpg" alt="Image" class="img-fluid rounded">
+        <img src="images/img_1.jpg" alt="Image" class="img-fluid rounded" > -->
+        <figure class="img-absolute">
+          <a href="images/food-1.jpg" data-fancybox="gallery" data-caption="Food Image">
+            <img src="images/food-1.jpg" alt="Food Image" class="img-fluid thumbnail">
+          </a>
+        </figure>
+        <a href="images/img_1.jpg" data-fancybox="gallery" data-caption="Main Image">
+          <img src="images/img_1.jpg" alt="Main Image" class="img-fluid rounded thumbnail">
+        </a>
+       
       </div>
-      <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
+      <div class="col-md-12 col-lg-7 order-lg-1" data-aos="fade-up">
         <h3 class="heading" style="font-size: 3.5rem; font-weight: bold;">Welcome!</h3>
         <p class="mb-4" style="font-size: .9rem;">to ANANDHAM INN, your home away from home. Escape to the ultimate retreat at ANANDHAM INN, where comfort meets convenience and hospitality reigns supreme! Nestled in the heart of Kumil Town. Located just off the Kumily Theni highway, our residence offers cozy accommodations, modern amenities, and friendly services. At ANANDHAM INN, we're passionate about crafting exceptional experiences that leave you feeling refreshed, renewed, and ready to take on the world! Join our family of happy guests and experience the difference!</p>
-        <!-- <p><a href="#" class="btn btn-primary text-white py-2 mr-3">Learn More</a> <span class="mr-3 font-family-serif"><em>or</em></span> <a href="https://vimeo.com/channels/staffpicks/93951774"  data-fancybox class="text-uppercase letter-spacing-1">See video</a></p> -->
+       
       </div>
     </div>
   </div>
 </section>
+
 
 
   <!-- <section class="section">
@@ -419,7 +435,7 @@
       </div>
     </div>
   </section> -->
-  <section class="section">
+  <!-- <section class="section">
     <div class="container">
       <div class="row justify-content-center text-center mb-5">
         <div class="col-md-7">
@@ -456,13 +472,13 @@
         </ul>
       </div>
     </div>
-  </section>
+  </section> -->
   
 
 
 
-  <section class="section slider-section bg-light">
-   
+  <section class="section slider-section " >
+    
     <div class="container">
       <div class="row justify-content-center text-center mb-5">
         <div class="col-md-7">
@@ -470,64 +486,128 @@
           <p data-aos="fade-up" data-aos-delay="100">Explore our luxurious accommodations through our gallery. Each room is meticulously designed to offer comfort and elegance, making your stay truly memorable.</p>
         </div>
       </div>
+      <div class="container">
+        
+        <div class="row">
+          <ul class="list-unstyled col-12">
+            <li class="mb-4" data-aos="fade-up">
+              <div class="room d-flex align-items-center">
+                <div class="room-info">
+                  <h3>Suite</h3>
+                 
+                </div>
+              </div>
+            </li>
+            <li class="mb-4" data-aos="fade-up">
+              <div class="room d-flex align-items-center">
+                <div class="room-info">
+                  <h3>Super Deluxe</h3>
+                
+                </div>
+              </div>
+            </li>
+            <li class="mb-4" data-aos="fade-up">
+              <div class="room d-flex align-items-center">
+                <div class="room-info">
+                  <h3>Deluxe</h3>
+                 
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-12">
           <div class="home-slider major-caousel owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
             <div class="slider-item">
-              <a href="images/h1.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h1.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h5.jpg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h5.jpg" alt="Image thumbnail" class="img-fluid">
+              </a>
+              
             </div>
             <div class="slider-item">
-              <a href="images/h2.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h2.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h2.JPG" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h2.JPG" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h3.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h3.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h3.JPG" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h3.JPG" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h4.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h4.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h4.jpg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h4.jpg" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h5.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h5.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h1.jpg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h1.jpg" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h6.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h6.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h6.JPG" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h6.JPG" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h7.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h7.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h7.JPG" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h7.JPG" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h8.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h8.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h8.JPG" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h8.JPG" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h9.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h9.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h9.JPG" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h9.JPG" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h10.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h10.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h10.JPG" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h10.JPG" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h11.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h11.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h11.JPG" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h11.JPG" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h12.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h12.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h12.JPG" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h12.JPG" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h13.JPG" data-fancybox="images" data-caption="Caption for this image"><img src="images/h13.JPG" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h13.JPG" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h13.JPG" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h14.jpeg" data-fancybox="images" data-caption="Caption for this image"><img src="images/h14.jpeg" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h14.jpeg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h14.jpeg" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h15.jpeg" data-fancybox="images" data-caption="Caption for this image"><img src="images/h15.jpeg" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h15.jpeg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h15.jpeg" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
             <div class="slider-item">
-              <a href="images/h16.jpeg" data-fancybox="images" data-caption="Caption for this image"><img src="images/h16" alt="Image placeholder" class="img-fluid"></a>
+              <a href="images/h16.jpeg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/h16.jpeg" alt="Image thumbnail" class="img-fluid">
+              </a>
             </div>
           </div>
           <!-- END slider -->
         </div>
       </div>
     </div>
-   
   </section>
+  
 <style>
   .slider-item img {
     width: 100%; /* Full width of the container */
@@ -539,43 +619,25 @@
   
 </style>  
 
-<section class="amenities" style="padding-top: 70px;" data-aos="fade-up">
 
-  <h2 style="padding-bottom: 20px;" >Featured Amenities On-Site</h2>
-  <div class="amenities-grid">
-    <div>
-      <span>🕒</span> 24 Hour Room Service
-    </div>
-    <div>
-      <span>📶</span> Free Super Fast Wifi
-    </div>
-    <div>
-      <span>❄️</span> AC/ Non AC Rooms
-    </div>
-    <div>
-      <span>🚿</span> Hot/Cold Water in Bathrooms
-    </div>
-    <div>
-      <span>📺</span> Smart TV
-    </div>
-    <div>
-      <span>☕</span> Tea/Coffee Maker and Kettle At Request
-    </div>
-    <div>
-      <span>🍳</span> Breakfast Available As Per Order
-    </div>
-    <div>
-      <span>🛏️</span> Extra Bed Available at Request - Payable
-    </div>
-    <div>
-      <span>💧</span> Bottled Water for Drinking
-    </div>
-  </div>
+  <section style="padding-left: 60px; padding-top: 70px; padding-right: 0; padding-bottom: 50px;" data-aos="fade-up">
   
-
-  <section class="hotel-info" style="padding-top: 80px;  padding-bottom: 100px;" data-aos="fade-up">
-    <h2 style="padding-bottom: 20px;">Hotel Information</h2>
-    
+    <!-- Featured Amenities On-Site Section -->
+    <h2 style="padding-bottom: 20px;">Featured Amenities On-Site</h2>
+    <div class="amenities-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
+      <div><span>🕒</span> 24 Hour Room Service</div>
+      <div><span>📶</span> Free Super Fast Wifi</div>
+      <div><span>❄️</span> AC/ Non AC Rooms</div>
+      <div><span>🚿</span> Hot/Cold Water in Bathrooms</div>
+      <div><span>📺</span> Smart TV</div>
+      <div><span>☕</span> Tea/Coffee Maker and Kettle At Request</div>
+      <div><span>🍳</span> Breakfast Available As Per Order</div>
+      <div><span>🛏️</span> Extra Bed Available at Request - Payable</div>
+      <div><span>💧</span> Bottled Water for Drinking</div>
+    </div>
+  
+    <!-- Hotel Information Section -->
+    <h2 style="padding-bottom: 20px; padding-top: 40px;">Hotel Information</h2>
     <div class="hotel-info-grid" style="display: flex; gap: 20px; flex-wrap: wrap;">
       <div class="check-in" style="flex: 1;">
         <h5><span class="icon-small">🕒</span> Check-In:</h5>
@@ -597,7 +659,9 @@
         <p>Complimentary On Site Parking</p>
       </div>
     </div>
+  
   </section>
+  
   
   <style>
     .icon-small {
@@ -659,7 +723,7 @@
 
 
 <!-- <footer class="section footer-section" style="padding-left: 0;"> -->
-  <footer class="section footer-section" style="padding-left: 0;" data-aos="fade-up">
+  <footer class="section footer-section"  data-aos="fade-up">
   <div class="container">
     <div class="row mb-4">
       <div class="col-md-4 mb-5">
